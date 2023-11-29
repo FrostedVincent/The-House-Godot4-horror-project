@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://dsda2nbagxvit"]
+
+[ext_resource type="Script" path="res://MainMenu/options/options_menu.gd" id="1_q2col"]
+[ext_resource type="PackedScene" uid="uid://vuj7ickm20o0" path="res://MainMenu/options/settings_tab_container.tscn" id="2_set8i"]
+
+[sub_resource type="SystemFont" id="SystemFont_tt1ft"]
+font_names = PackedStringArray("Candara")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mfaag"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2fv4q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ue8fw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hab3f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_biie6"]
+
+[node name="Options_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q2col")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -48
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_tt1ft")
+theme_override_font_sizes/font_size = 50
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings_Tab_Container" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_set8i")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mfaag")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2fv4q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ue8fw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hab3f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_biie6")
+text = "Back"
