@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://p01sdipjrj8u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fcpcn"]
+
+[node name="credit_name" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 90
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 90
+theme_override_constants/margin_bottom = 60
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="vince" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 26
+text = "Vincent Bérubé (FrostedVincent) :
+Coder"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 235
+theme_override_styles/separator = SubResource("StyleBoxEmpty_fcpcn")
+
+[node name="alex" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 26
+text = "Alexis Bérubé (Table):
+3D Artist"
