@@ -7,7 +7,14 @@ extends Control
 
 func _ready():
 	check_button.toggled.connect(on_subtitles_toggled)
+	load_data()
 
+
+func load_data() -> void:
+	if SettingsDataContainer.get_subtitles_set() != true:
+		check_button.button_pressed = false
+	else:
+		check_button.button_pressed = true
 
 func set_label_text(button_pressed : bool) -> void:
 	if button_pressed != true:
