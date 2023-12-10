@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://g8cqbv4a0d1k"
+path="res://.godot/imported/The Caretaker - Its just a burning memory (2016).mp3-0b2c44b7dee4717401600bd0e2489c0c.mp3str"
+
+[deps]
+
+source_file="res://Sound/Music/The Caretaker - Its just a burning memory (2016).mp3"
+dest_files=["res://.godot/imported/The Caretaker - Its just a burning memory (2016).mp3-0b2c44b7dee4717401600bd0e2489c0c.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

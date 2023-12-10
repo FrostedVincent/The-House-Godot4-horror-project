@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dki3y7j6t1fbb"]
+[gd_scene load_steps=13 format=3 uid="uid://dki3y7j6t1fbb"]
 
 [ext_resource type="Script" path="res://MainMenu/main/menu.gd" id="1_skujw"]
 [ext_resource type="PackedScene" uid="uid://cfkwttuuni07x" path="res://MainMenu/credits/credits_menu.tscn" id="3_0adp6"]
 [ext_resource type="PackedScene" uid="uid://dsda2nbagxvit" path="res://MainMenu/options/options_menu.tscn" id="3_aw2jo"]
+[ext_resource type="AudioStream" uid="uid://g8cqbv4a0d1k" path="res://Sound/Music/The Caretaker - Its just a burning memory (2016).mp3" id="4_p1mds"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mrw8l"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -136,5 +137,11 @@ visible = false
 
 [node name="Credits_Menu" parent="." instance=ExtResource("3_0adp6")]
 visible = false
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_p1mds")
+volume_db = -8.37
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]

@@ -5,8 +5,8 @@ extends Control
 @onready var option_button = $HBoxContainer/OptionButton as OptionButton
 
 const RESOLUTION_DICTIONARY : Dictionary = {
-	"1152 x 648" : Vector2i(1152, 648),
 	"1280 x 720" : Vector2i(1280, 720),
+	"1366 x 768" : Vector2i(1366, 768),
 	"1920 x 1080" : Vector2i(1920, 1080)
 }
 
@@ -21,4 +21,5 @@ func add_resolution_items() -> void:
 
 
 func _on_resolution_selected(index : int) -> void:
+	SettingsSignalBus.emit_on_resolution_selected(index)
 	DisplayServer.window_set_size(RESOLUTION_DICTIONARY.values()[index])
