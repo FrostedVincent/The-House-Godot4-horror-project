@@ -17,6 +17,14 @@ background_mode = 2
 sky = SubResource("Sky_wn00m")
 tonemap_mode = 2
 glow_enabled = true
+fog_enabled = true
+fog_light_energy = 0.98
+fog_sun_scatter = 0.45
+fog_density = 0.1211
+fog_aerial_perspective = 0.877
+fog_sky_affect = 0.22
+fog_height = -113.78
+fog_height_density = 16.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ifkqg"]
 
