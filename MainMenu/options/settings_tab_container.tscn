@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://vuj7ickm20o0"]
+[gd_scene load_steps=10 format=3 uid="uid://vuj7ickm20o0"]
 
 [ext_resource type="PackedScene" uid="uid://b4708de06kums" path="res://MainMenu/options/hotkey_rebind_button.tscn" id="1_3gu1m"]
 [ext_resource type="PackedScene" uid="uid://dv50q6g7tg123" path="res://MainMenu/options/windows_mode_button.tscn" id="1_7kr0n"]
+[ext_resource type="Script" path="res://MainMenu/options/settings_tab_container.gd" id="1_h3j4v"]
 [ext_resource type="PackedScene" uid="uid://c3qq3v8k2ovwx" path="res://MainMenu/options/resolution_mode_button.tscn" id="2_ne4et"]
 [ext_resource type="PackedScene" uid="uid://bxkx16c460p0p" path="res://MainMenu/sound/audio_slider_settings.tscn" id="4_xf3lh"]
 [ext_resource type="PackedScene" uid="uid://dsgbpccq4x5ax" path="res://MainMenu/accessibility/subtitles_toggle_button.tscn" id="5_5ico2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fgisc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhb1r"]
 
@@ -17,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_h3j4v")
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 1
@@ -29,10 +33,10 @@ offset_right = -100.0
 offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fgisc")
 tab_alignment = 1
 
 [node name="Graphics" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Graphics"]
@@ -61,6 +65,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Controls" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Controls"]
